@@ -1,0 +1,6 @@
+ErrorDocument 404 /api/404.json
+ErrorDocument 403 /api/404.json
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.api.php [NC,L]
