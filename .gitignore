@@ -1,3 +1,2 @@
-README.md
-config.inc.php
-/api/cache/
+/src/config.inc.php
+/src/api/cache/
