@@ -1,2 +1,2 @@
 src/config.inc.php
-src/api/cache/
+src/api/cache/*
