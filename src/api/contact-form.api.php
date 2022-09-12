@@ -1,5 +1,4 @@
 <?php
-require("../config.inc.php");
 header("Content-type: application/json");
 
 if (!isset($_POST["email"]) || !isset($_POST["name"]) || !isset($_POST["title"]) || !isset($_POST["message"]) || !isset($_POST["h-captcha-response"])) {
@@ -32,6 +31,8 @@ $msg_len = strlen($msg);
 if ($msg_len < 50 || $msg_len > 3000) {
     $errors[] = "The submitted message is invalid.";
 }
+
+require("../config.inc.php");
 
 $ip = CONFIG['client_ip'];
 $catpcha_response = json_decode(file_get_contents("https://hcaptcha.com/siteverify?secret=".CONFIG['hcaptcha']['secret']."&response={$captcha}&remoteip={$ip}"), true);

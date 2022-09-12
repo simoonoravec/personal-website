@@ -2,7 +2,7 @@
 ini_set('default_socket_timeout', 30);
 header("Content-type: application/json");
 function getSensorData() {
-    $data = json_decode(file_get_contents("https://tempmon.0r4v3c.xyz/public/current_temp.php"), true);
+    $data = json_decode(file_get_contents("https://homeapi.0r4v3c.xyz/tempmon/current_temp.php"), true);
     if ($data == false || $data["success"] != true) {
         return [false, 0];
     } else {
