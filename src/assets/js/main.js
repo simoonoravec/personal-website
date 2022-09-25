@@ -30,7 +30,7 @@ const updatePage = () => {
     let hash = window.location.hash;
     let page = ($(hash).length != 0) ? $(hash) : $('#home');
 
-    if ($(hash).length == 0) window.location.hash = '';
+    if (hash.length > 0 && $(hash).length == 0) window.location.hash = '';
 
     let navItemCurrent = $('.nav-active');
     if (navItemCurrent.length != 0) navItemCurrent.removeClass('nav-active');
