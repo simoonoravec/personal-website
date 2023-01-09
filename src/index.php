@@ -1,7 +1,7 @@
 <?php
 require("./config.inc.php");
 $bday = new DateTime('27.11.2002');
-$today = new Datetime(date('m.d.y'));
+$today = new DateTime(date('m.d.y'));
 $diff = $today->diff($bday);
 
 $month_string = ($diff->m > 1) ? 'months':'month';
@@ -24,6 +24,7 @@ $rand = 'e_'.bin2hex(openssl_random_pseudo_bytes(3));
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://static.0r4v3c.xyz/icons.min.css">
     <link rel="stylesheet" href="https://static.0r4v3c.xyz/cute-alert/cute-alert.css">
+    <?php if ($snow): ?><link rel="stylesheet" href="/assets/css/snowfall.css"><?php echo PHP_EOL; endif; ?>
     <title>Šimon Oravec - Personal domain</title>
 </head>
 <body>
